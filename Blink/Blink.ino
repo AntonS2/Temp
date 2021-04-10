@@ -51,7 +51,7 @@ void setup() {
 
 if((WiFi.status() == WL_CONNECTED)) {
 
-        t_httpUpdate_return ret = ESPhttpUpdate.update("https://raw.githubusercontent.com/AntonS2/Temp/master/Blink.bin");
+        t_httpUpdate_return ret = ESPhttpUpdate.update("https://raw.githubusercontent.com/AntonS2/Temp/master/Blink1.bin");
 
         switch(ret) {
             case HTTP_UPDATE_FAILED:
