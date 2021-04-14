@@ -50,7 +50,7 @@ if(
     header($_SERVER["SERVER_PROTOCOL"].' 500 ESP MAC not configured for updates', true, 500);
  }
 
- $localBinary = "./bin/".$db[$_SERVER['HTTP_X_ESP8266_STA_MAC']].".bin";
+ $localBinary = "./bin/".$db[$_SERVER['HTTP_X_ESP8266_STA_MAC']]."Blink1.bin";
 
 // проверяем, прислал ли ESP8266 версию прошивки;
 // если она не соответствует, проверяем соответствие MD5-хэшэй между 
