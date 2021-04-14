@@ -41,16 +41,16 @@ if(
     exit();
 }
 
-// $db = array(
-//    "18:FE:AA:AA:AA:AA" => "DOOR-7-g14f53a19",
-//    "18:FE:AA:AA:AA:BB" => "TEMP-1.0.0"
-// );
+ $db = array(
+    "7c:9e:bd:e3:14:24" => "v1"
+    
+ );
 
-// if(!isset($db[$_SERVER['HTTP_X_ESP8266_STA_MAC']])) {
-//    header($_SERVER["SERVER_PROTOCOL"].' 500 ESP MAC not configured for updates', true, 500);
-// }
+ if(!isset($db[$_SERVER['HTTP_X_ESP8266_STA_MAC']])) {
+    header($_SERVER["SERVER_PROTOCOL"].' 500 ESP MAC not configured for updates', true, 500);
+ }
 
-// $localBinary = "./bin/".$db[$_SERVER['HTTP_X_ESP8266_STA_MAC']].".bin";
+ $localBinary = "./bin/".$db[$_SERVER['HTTP_X_ESP8266_STA_MAC']].".bin";
 
 // проверяем, прислал ли ESP8266 версию прошивки;
 // если она не соответствует, проверяем соответствие MD5-хэшэй между 
@@ -63,4 +63,4 @@ if((!check_header('HTTP_X_ESP8266_SDK_VERSION') && $db[$_SERVER['HTTP_X_ESP8266_
     header($_SERVER["SERVER_PROTOCOL"].' 304 Not Modified', true, 304);
 }
 
-// header($_SERVER["SERVER_PROTOCOL"].' 500 no version for ESP MAC', true, 500);
+ header($_SERVER["SERVER_PROTOCOL"].' 500 no version for ESP MAC', true, 500);
